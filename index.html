@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman ❤️ Namrata | Wedding Invitation</title>
+
+    <style>/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+    body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#fffaf5,#f8f4ef,#fff);
+    color:#333;
+    overflow-x:hidden;
+}
+
+
+/* Loader */
+.loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader h1{
+    font-size:70px;
+    animation:pulse 1.5s infinite;
+}
+.loader{
+    background:linear-gradient(135deg,#fff,#f5efe5);
+}
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+/* Hero */
+
+    .hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25)),
+    url("images/bg.jpg") center/cover no-repeat;
+}
+
+
+.hero-content h3{
+    color:#d4af37;
+    letter-spacing:4px;
+}
+
+.hero-content h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    margin:20px 0;
+}
+
+.hero-content span{
+    color:#ff4d6d;
+}
+
+.hero-content p{
+    font-size:22px;
+}
+
+.hero-content h2{
+    margin:20px 0;
+    color:#d4af37;
+}
+.btn{
+    display:inline-block;
+    padding:15px 45px;
+    border-radius:50px;
+    text-decoration:none;
+    background:linear-gradient(45deg,#d4af37,#f7d774);
+    color:#222;
+    font-weight:bold;
+    transition:.4s;
+}
+.btn:hover{
+    background:#fff;
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 25px rgba(212,175,55,.45);
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:30px;
+    color:#d4af37;
+    font-family:'Great Vibes',cursive;
+}
+
+.invite p,
+.message p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    font-size:18px;
+}
+
+/* Countdown */
+#timer{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+#timer div{
+    width:120px;
+    height:120px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#timer span{
+    font-size:40px;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+/* Couple */
+.box{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    overflow:hidden;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+/* Details */
+.details{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+.detail{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Gallery */
+.photos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.photos img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.photos img:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+footer{
+    background:#fff;
+    color:#333;
+    border-top:1px solid #eee;
+}
+
+footer h2{
+    color:#d4af37;
+}
+
+footer p{
+    margin-top:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:50px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+#timer div{
+    width:90px;
+    height:90px;
+}
+
+#timer span{
+    font-size:28px;
+}
+
+section{
+    padding:60px 20px;
+}
+    .loader{
+    background:linear-gradient(135deg,#fff,#f5efe5);
+}/* ================= HERO SECTION ================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("images/bg.jpg") center center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.35));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:750px;
+    padding:45px 35px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:30px;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    animation:fadeUp 1.5s ease;
+}
+
+.hero-content h3{
+    color:#FFD700;
+    font-size:18px;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+    color:#fff;
+    line-height:1.2;
+    text-shadow:0 5px 15px rgba(0,0,0,.5);
+}
+
+.hero-content span{
+    color:#ff4d6d;
+}
+
+.hero-content p{
+    margin:15px 0;
+    color:#fff;
+    font-size:22px;
+    font-weight:300;
+}
+
+.hero-content h2{
+    color:#FFD700;
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 45px;
+    border-radius:50px;
+    text-decoration:none;
+    background:linear-gradient(45deg,#FFD700,#d4af37);
+    color:#222;
+    font-weight:700;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:#fff;
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 12px 30px rgba(255,215,0,.5);
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero-content{
+    width:90%;
+    padding:30px 20px;
+}
+
+.hero-content h1{
+    font-size:58px;
+}
+
+.hero-content h2{
+    font-size:28px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.hero-content h3{
+    font-size:15px;
+    letter-spacing:3px;
+}
+
+.btn{
+    padding:14px 35px;
+}
+
+}
+
+}</style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="loader">
+    <h1>💍</h1>
+    <p>Loading Our Wedding...</p>
+</div>
+
+<header class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h3>Wedding Invitation</h3>
+
+        <h1>Suman <span>❤️</span> Namrata</h1>
+
+        <p>We're Getting Married</p>
+
+        <h2>06 July 2026</h2>
+
+        <a href="#invite" class="btn">
+            Open Invitation
+        </a>
+
+    </div>
+
+</header>
+
+<section id="invite" class="invite">
+
+<h2>Welcome</h2>
+
+<p>
+
+With great joy and love,
+we warmly invite you to celebrate
+our wedding ceremony.
+
+Your presence will make
+our special day even more memorable.
+
+</p>
+
+</section>
+
+<section class="countdown">
+
+<h2>Countdown</h2>
+
+<div id="timer">
+
+<div>
+<span id="days">00</span>
+<p>Days</p>
+</div>
+
+<div>
+<span id="hours">00</span>
+<p>Hours</p>
+</div>
+
+<div>
+<span id="minutes">00</span>
+<p>Minutes</p>
+</div>
+
+<div>
+<span id="seconds">00</span>
+<p>Seconds</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="couple">
+
+<h2>The Couple</h2>
+
+<div class="box">
+
+<div class="card">
+
+<img src="https://pps.whatsapp.net/v/t61.24694-24/629651515_1548554433285938_2298791197780215768_n.jpg?ccb=11-4&oh=01_Q5Aa4wEYgSCUnfHs_7N3h6E-WiQPpJAMbZPqzFiHQD-itAnGJw&oe=6A4F0C48&_nc_sid=5e03e0&_nc_cat=102">
+
+<h3>Suman Jana</h3>
+
+<p>The Groom</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://media-ccu1-1.cdn.whatsapp.net/v/t61.24694-24/724038880_1714531039857587_8954943294597471089_n.jpg?ccb=11-4&oh=01_Q5Aa4wEPG5MkIUvplrKxghn07Fmk9_Uw4o2zSWwcY_OS6irXkg&oe=6A4F2593&_nc_sid=5e03e0&_nc_cat=108">
+
+<h3>Namrata Jana</h3>
+
+<p>The Bride</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="details">
+
+<h2>Wedding Details</h2>
+
+<div class="detail">
+
+<h3>Date</h3>
+
+<p>06 July 2026</p>
+
+</div>
+
+<div class="detail">
+
+<h3>Lunch</h3>
+
+<p>11:00 AM</p>
+
+</div>
+
+<div class="detail">
+
+<h3>Venue</h3>
+
+<p>Dakshin Sener Chak,<br>
+Kalinagar, Kakdwip</p>
+
+</div>
+
+<div class="detail">
+
+<h3>Contact</h3>
+
+<p>9907992247</p>
+
+</div>
+
+</section>
+
+
+
+<section class="message">
+
+<h2>A Message From Us</h2>
+
+<p>
+
+Life is more beautiful
+when shared with loved ones.
+
+Join us as we begin
+our forever together.
+
+We look forward
+to celebrating with you.
+
+</p>
+
+</section>
+
+<footer>
+
+<h2>Thank You</h2>
+
+<p>
+
+Made with ❤️
+
+Suman & Namrata
+
+</p>
+
+</footer>
+
+<script>/* ===========================
+   Wedding Website Script
+   Suman ❤️ Namrata
+=========================== */
+
+// Loader
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+    }, 1800);
+});
+
+
+// ===========================
+// Countdown Timer
+// ===========================
+
+const weddingDate = new Date("July 06, 2026 11:00:00").getTime();
+
+const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+
+        clearInterval(timer);
+
+        document.getElementById("timer").innerHTML =
+            "<h2>🎉 Our Wedding Day Has Arrived ❤️</h2>";
+
+    }
+
+}, 1000);
+
+
+// ===========================
+// Smooth Scroll
+// ===========================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+    });
+
+});
+
+
+// ===========================
+// Gallery Hover Effect
+// ===========================
+
+const images = document.querySelectorAll(".photos img");
+
+images.forEach(img => {
+
+    img.addEventListener("mouseover", () => {
+
+        img.style.transform = "scale(1.08) rotate(2deg)";
+
+    });
+
+    img.addEventListener("mouseleave", () => {
+
+        img.style.transform = "scale(1)";
+
+    });
+
+});
+
+
+// ===========================
+// Fade Animation on Scroll
+// ===========================
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0px)";
+
+        }
+
+    });
+
+});
+
+sections.forEach(section => {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(80px)";
+    section.style.transition = "1s";
+
+    observer.observe(section);
+
+});
+
+
+// ===========================
+// Background Music
+// ===========================
+
+const music = new Audio("music/wedding.mp3");
+
+music.loop = true;
+
+const musicBtn = document.createElement("button");
+
+musicBtn.innerHTML = "🎵 Music";
+
+musicBtn.style.position = "fixed";
+musicBtn.style.bottom = "20px";
+musicBtn.style.right = "20px";
+musicBtn.style.padding = "12px 20px";
+musicBtn.style.border = "none";
+musicBtn.style.borderRadius = "50px";
+musicBtn.style.cursor = "pointer";
+musicBtn.style.background = "#d4af37";
+musicBtn.style.fontWeight = "bold";
+
+document.body.appendChild(musicBtn);
+
+let playing = false;
+
+musicBtn.onclick = () => {
+
+    if (!playing) {
+
+        music.play();
+
+        musicBtn.innerHTML = "⏸ Pause";
+
+        playing = true;
+
+    } else {
+
+        music.pause();
+
+        musicBtn.innerHTML = "🎵 Music";
+
+        playing = false;
+
+    }
+
+};
+
+
+// ===========================
+// Welcome Message
+// ===========================
+
+setTimeout(() => {
+
+    alert("💍 Welcome to Suman ❤️ Namrata's Wedding Invitation");
+
+}, 2500);</script>
+    <!-- Popup -->
+<div id="welcomePopup" class="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <h2>💖 Welcome 💖</h2>
+
+    <p>
+      আপনাকে আমাদের বিবাহ অনুষ্ঠানে সাদর আমন্ত্রণ।<br><br>
+      <strong>Suman ❤️ Namrata</strong><br>
+      06 July 2026
+    </p>
+
+    <button onclick="closePopup()">Open Invitation</button>
+  </div>
+</div>
+
+<style>
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    animation:fadeIn .5s;
+}
+
+.popup-box{
+    width:90%;
+    max-width:380px;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    animation:zoomIn .5s;
+}
+
+.popup-box h2{
+    color:#d63384;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.popup-box p{
+    color:#444;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.popup-box button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#d63384;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.popup-box button:hover{
+    background:#b02067;
+    transform:scale(1.05);
+}
+
+.close-btn{
+    position:absolute;
+    margin-top:-20px;
+    right:25px;
+    font-size:28px;
+    cursor:pointer;
+    color:#999;
+}
+
+.close-btn:hover{
+    color:red;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+
+<script>
+function closePopup(){
+    document.getElementById("welcomePopup").style.display="none";
+}
+</script>
+
+</body>
+</html>
